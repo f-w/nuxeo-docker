@@ -21,6 +21,7 @@ RUN echo nuxeo   nuxeo/bind-address      string  0.0.0.0 | /usr/bin/debconf-set-
 RUN echo nuxeo   nuxeo/http-port string  8080 | /usr/bin/debconf-set-selections
 RUN echo nuxeo   nuxeo/database  select  Autoconfigure PostgreSQL | /usr/bin/debconf-set-selections
 RUN apt-get update && apt-get install -y nuxeo
+VOLUME /var/lib/postgresql
 COPY nuxeo-start.sh /root/
 RUN chmod 0777 /root/nuxeo-start.sh
 CMD ["/root/nuxeo-start.sh"]
