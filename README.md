@@ -1,10 +1,10 @@
 # nuxeo-docker
 
-## Pre-requisites
+## Prerequisites
 1. A Linux with Docker installed
 2. The Linux supports upstart
 
-## Fist-time build
+## First-time build
 
 ```
 git clone https://github.com/BCDevExchange/nuxeo-docker.git
