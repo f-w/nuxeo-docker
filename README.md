@@ -25,4 +25,7 @@ If everything goes well
 3. a deamon `docker-containers` will be created to keep `bcdevexchange-nuxeo` running across server reboots
 
 ## Operation
-To shutdown, `stop docker-containers`
+Manual
+* shutdown: `stop docker-containers`
+* start: `start docker-containers`
+
