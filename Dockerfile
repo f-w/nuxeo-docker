@@ -21,11 +21,11 @@ RUN add-apt-repository "deb http://apt.nuxeo.org/ $(lsb_release -cs) fasttracks"
 RUN echo nuxeo   nuxeo/bind-address      string  0.0.0.0 | /usr/bin/debconf-set-selections
 RUN echo nuxeo   nuxeo/http-port string  8080 | /usr/bin/debconf-set-selections
 RUN echo nuxeo   nuxeo/database  select  Autoconfigure PostgreSQL | /usr/bin/debconf-set-selections
-RUN wget -q http://apt.nuxeo.org/pool/fasttracks/nuxeo_7.4-01_all.deb
+RUN wget -q http://apt.nuxeo.org/pool/releases/nuxeo_7.10-01_all.deb
 # Following 3 lines play the trick to get dependencies of a downloaded .deb package installed automatically
-RUN dpkg -i nuxeo_7.4-01_all.deb; exit 0
+RUN dpkg -i nuxeo_7.10-01_all.deb; exit 0
 RUN apt-get update && apt-get install -fy
-RUN dpkg -i nuxeo_7.4-01_all.deb
+RUN dpkg -i nuxeo_7.10-01_all.deb
 VOLUME ["nuxeo-postgres:/var/lib/postgresql", "nuxeo-conf:/etc/nuxeo/"]
 COPY nuxeo-start.sh /root/
 RUN chmod 0777 /root/nuxeo-start.sh
