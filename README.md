@@ -1,5 +1,5 @@
 # nuxeo-docker
-This docker project builds an all-in-one version 7.4-01 of nuxeo over debian jessie image. It is not scalable therefore only suitable for development or small scale production.
+This docker project builds an all-in-one version 7.10-01 of nuxeo over debian jessie image. It is not scalable therefore only suitable for development or small scale production.
 
 ## Prerequisites
 1. A Linux with following software installed
